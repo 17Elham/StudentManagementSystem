@@ -9,6 +9,7 @@ public abstract class Person {
     private int id;
     private String name;
     private String email;
+    
 
     // Constructor to initialize properties
     public Person(int id, String name, String email) {

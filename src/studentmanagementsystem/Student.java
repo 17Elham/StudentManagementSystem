@@ -5,7 +5,7 @@ public class Student extends Person {
     private String major;
 
     public Student(int id, String name, String email, double gpa, String major) {
-        super(id, name, email);
+        super(id, name, email); // الآن متناسق 100% مع كلاس Person
         this.gpa = gpa;
         this.major = major;
     }
@@ -15,7 +15,7 @@ public class Student extends Person {
     }
 
     public void setGpa(double gpa) {
-        if(gpa >= 0.0 && gpa <= 4.0) {
+        if (gpa >= 0.0 && gpa <= 4.0) {
             this.gpa = gpa;
         } else {
             System.out.println("Error: GPA must be between 0.0 and 4.0");
@@ -33,7 +33,7 @@ public class Student extends Person {
     @Override
     public void displayDetails() {
         System.out.println("=== Student Details ===");
-        System.out.println("ID: " + getId()); 
+        System.out.println("ID: " + getId());
         System.out.println("Name: " + getName());
         System.out.println("Email: " + getEmail());
         System.out.println("Major: " + this.major);
