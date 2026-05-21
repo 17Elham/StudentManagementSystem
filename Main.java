@@ -52,5 +52,33 @@ public class Main {
         }
 
         System.out.println("\nSystem continues running smoothly...");
+        
+        
+        // Fetch and display student enrollment report from database
+        System.out.println("\n=== Student Enrollment Report (From Database) ===");
+        String query = "SELECT s.name AS student_name, c.course_name AS course_name, e.grade AS final_grade " +
+                       "FROM enrollments e " +
+                       "INNER JOIN students s ON e.student_id = s.student_id " +
+                       "INNER JOIN courses c ON e.course_code = c.course_code";
+
+        try (java.sql.Connection conn = DatabaseConnection.getConnection();
+             java.sql.PreparedStatement stmt = conn.prepareStatement(query);
+             java.sql.ResultSet rs = stmt.executeQuery()) {
+
+            System.out.println(String.format("%-15s | %-30s | %-10s", "Student Name", "Course Name", "Grade"));
+            System.out.println("------------------------------------------------------------------");
+
+            while (rs.next()) {
+                String studentName = rs.getString("student_name");
+                String courseName = rs.getString("course_name");
+                double grade = rs.getDouble("final_grade");
+                
+                System.out.println(String.format("%-15s | %-30s | %-10.1f", studentName, courseName, grade));
+            }
+            System.out.println("------------------------------------------------------------------");
+
+        } catch (java.sql.SQLException e) {
+            System.out.println("Error fetching data: " + e.getMessage());
+        }
+        }
     }
-}
