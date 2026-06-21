@@ -1,5 +1,11 @@
 package studentmanagementsystem;
-
+/**
+ * Represents a teacher entity in the system.
+ * Inherits common attributes from the Person class and adds
+ * information related to the teacher's department.
+ * @author Elham Husein
+ * @version 1.0
+ */
 public class Teacher extends Person {
     private String department;
     private double salary;

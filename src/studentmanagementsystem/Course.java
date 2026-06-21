@@ -1,5 +1,9 @@
 package studentmanagementsystem;
-
+/**
+ * Represents a course offered by the academy.
+ * Stores course name and course code.
+ * @author Elham Husein
+ */
 
 
 public class Course {
@@ -39,7 +43,10 @@ public class Course {
         this.creditHours = creditHours;
     }
 
-    // Method to display course details
+    /**
+     * Overrides the displayInfo method from the Person class
+     * to include student-specific details.
+     */
     public void displayCourseInfo() {
         System.out.println("Course Code: " + courseCode);
         System.out.println("Course Name: " + courseName);

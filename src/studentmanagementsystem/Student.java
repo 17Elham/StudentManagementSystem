@@ -1,5 +1,10 @@
 package studentmanagementsystem;
-
+/**
+ * Represents a student entity in the system.
+ * Inherits common attributes from the Person class.
+ * @author Elham Husein
+ * @version 1.0
+ */
 public class Student extends Person {
     private double gpa;
     private String major;

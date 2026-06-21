@@ -1,5 +1,9 @@
-package studentmanagementsystem;
-
+ package studentmanagementsystem;
+/**
+     * Establishes a connection to the MySQL database.
+     * @return A Connection object if the connection is successful.
+     * @throws SQLException If a database access error occurs.
+     */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
