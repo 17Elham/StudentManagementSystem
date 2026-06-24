@@ -8,6 +8,14 @@ public class Main {
         Course course = null;
         Teacher teacher = null;
         Department dept = null;
+        
+      
+    // 1. تجربة الحفظ
+    Course newCourse = new Course("Java Programming", "Object-Oriented Programming", 101);
+    newCourse.save(); 
+    
+    // 2. تجربة عرض البيانات
+    Course.displayAllCourses();
 
         try {
             // 2. إنشاء كلاس القسم
