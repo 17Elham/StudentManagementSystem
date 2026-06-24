@@ -4,11 +4,10 @@
  */
 package studentmanagementsystem;
 
-/**
- *
- * @author ألهام حسين
+
+   /**
+ * Handles all database interactions including insertion and retrieval.
  */
-   
 
 public interface DatabaseOperations {
     

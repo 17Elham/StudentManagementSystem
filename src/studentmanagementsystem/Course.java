@@ -4,13 +4,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
+
+
 /**
- * Represents a course offered by the academy.
- * Stores course name and course code.
- * @author Elham Husein
+ * Represents the course entity and its academic details.
  */
-
-
 public class Course implements DatabaseOperations {
     private int id;
     private String courseName;
@@ -18,7 +16,10 @@ public class Course implements DatabaseOperations {
     private int creditHours;
     
 
-    // Constructor
+    /**
+ * Constructs a new Course with the given details.
+ */
+
     public Course(  String courseName, String courseCode, int id) {
         this.id = id;
         this.courseName = courseName;

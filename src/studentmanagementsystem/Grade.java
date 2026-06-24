@@ -7,8 +7,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author ألهام حسين
+ * Handles the grade information for students in their enrolled courses.
  */
 public class Grade extends javax.swing.JFrame {
     

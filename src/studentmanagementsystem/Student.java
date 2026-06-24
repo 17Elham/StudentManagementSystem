@@ -4,16 +4,14 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
-/**
- * Represents a student entity in the system.
- * Inherits common attributes from the Person class.
- * @author Elham Husein
- * @version 1.0
- */
 public class Student extends Person implements DatabaseOperations {
     private double gpa;
     private String major;
-
+/**
+ * Constructs a new Student object with specified details 
+ * and initializes inherited Person attributes.
+ */
+    
     public Student(int id, String name, String email, double gpa, String major) {
         super(id, name, email); //      
         this.gpa = gpa;
@@ -53,7 +51,6 @@ public class Student extends Person implements DatabaseOperations {
     @Override
     public void save() {
     try {
-        // افترضي أن لديكِ اتصال جاهز بقاعدة البيانات
         Connection conn = DatabaseConnection.getConnection(); 
         String query = "INSERT INTO students (id, name, email, major, gpa) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement pstmt = conn.prepareStatement(query);
