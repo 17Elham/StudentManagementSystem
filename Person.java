@@ -6,11 +6,17 @@ package studentmanagementsystem;
  */
 public abstract class Person {
     // Attributes encapsulated using private access modifier
-    private int id;
-    private String name;
+    private int id;//Unique identifier for the person
+    private String name; // Full name of the person
     private String email;
-
-    // Constructor to initialize properties
+    
+/**
+ * Initializes a new Person object with the specified details.
+ * 
+ * @param id The unique identification number.
+ * @param name The name of the person.
+ * @param email The contact email address.
+ */
     public Person(int id, String name, String email) {
         this.id = id;
         this.name = name;

@@ -1,5 +1,8 @@
 package studentmanagementsystem;
-
+/**
+ * Represents the enrollment of a student in a specific course.
+ * Manages the relationship between Student and Course entities.
+ */
 public class Enrollment {
     private Student student;
     private Course course;

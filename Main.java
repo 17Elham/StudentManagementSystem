@@ -4,11 +4,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== Student Management System - Test Run ===\n");
 
-        // 1. صُنع الكائنات برّع الـ try عشان يقعدوا حقيقيين ونقدروا نربطوهم ببعض لوطة
         Student student = null;
         Course course = null;
         Teacher teacher = null;
         Department dept = null;
+        
+      
+    // 1. تجربة الحفظ
+    Course newCourse = new Course("Java Programming", "Object-Oriented Programming", 101);
+    newCourse.save(); 
+    
+    // 2. تجربة عرض البيانات
+    Course.displayAllCourses();
 
         try {
             // 2. إنشاء كلاس القسم
@@ -40,7 +47,7 @@ public class Main {
             }
             System.out.println("-----------------------------------");
 
-            // 7. تجربة الـ Exception Handling (شغل الحماية اللي يبيها الدكتور)
+            // 7.   Exception Handling 
             System.out.println("\n=== Testing Exception Handling (Age validation check) ===");
             int testAge = -5;
             if (testAge < 0) {
